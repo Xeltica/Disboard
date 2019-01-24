@@ -2,5 +2,5 @@
 
 namespace Disboard.Misskey.Models.Streaming
 {
-	public class MentionMessage : Note, IStreamMessage { }
+	public class MessagingMessage : Message, IStreamMessage { }
 }

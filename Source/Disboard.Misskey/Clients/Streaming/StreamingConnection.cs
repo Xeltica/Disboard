@@ -93,7 +93,11 @@ namespace Disboard.Misskey.Clients.Streaming
                         json.Body.Decoded = json.Body.RawBody.ToObject<UnfollowMessage>();
                         break;
 
-                    default:
+					case "messagingMessage":
+						json.Body.Decoded = json.Body.RawBody.ToObject<MessagingMessage>();
+						break;
+
+					default:
                         if (json.Body == null)
                             throw new ArgumentOutOfRangeException(json.Body?.Type);
                         if (json.Type.StartsWith("api"))
