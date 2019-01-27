@@ -75,7 +75,15 @@ namespace Disboard.Misskey.Clients
             return ApplyStreamFilter(_observable, id);
         }
 
-        internal async Task SendAsync(WsRequest request)
+		public IObservable<IStreamMessage> HybridTimelineAsObservable()
+		{
+			var id = Guid.NewGuid().ToString();
+			var body = new WsRequest { Body = new Connection { Channel ="hybridTimeline", Id = id }, Type = "connect" };
+			SendAsync(body).Wait();
+			return ApplyStreamFilter(_observable, id);
+		}
+
+		internal async Task SendAsync(WsRequest request)
         {
             if (_connection == null)
                 throw new InvalidOperationException("Does not connect to WebSocket stream");
