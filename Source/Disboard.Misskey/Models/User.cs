@@ -99,6 +99,9 @@ namespace Disboard.Misskey.Models
         [JsonProperty("isAdmin")]
         public bool? IsAdmin { get; set; }
 
+        [JsonProperty("isModerator")]
+        public bool? IsModerator { get; set; }
+
         [JsonProperty("isBlocked")]
         public bool? IsBlocked { get; set; }
 
