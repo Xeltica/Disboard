@@ -19,6 +19,7 @@ namespace Disboard.Misskey
     {
         public AggregationClient Aggregation { get; }
         public ApClient Ap { get; }
+        public AdminClient Admin { get; }
         public MisskeyAppClient App { get; }
         public AuthClient Auth { get; }
         public BlockingClient Blocking { get; }
@@ -45,6 +46,7 @@ namespace Disboard.Misskey
 
             Aggregation = new AggregationClient(this);
             Ap = new ApClient(this);
+			Admin = new AdminClient(this);
             App = new MisskeyAppClient(this);
             Auth = new AuthClient(this);
             Blocking = new BlockingClient(this);
