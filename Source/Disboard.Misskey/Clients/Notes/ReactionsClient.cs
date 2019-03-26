@@ -22,6 +22,17 @@ namespace Disboard.Misskey.Clients.Notes
             await PostAsync("/create", parameters).Stay();
         }
 
+        public async Task CreateAsync(string noteId, string reaction)
+        {
+            var parameters = new List<KeyValuePair<string, object>>
+            {
+                new KeyValuePair<string, object>("noteId", noteId),
+                new KeyValuePair<string, object>("reaction", reaction)
+            };
+
+            await PostAsync("/create", parameters).Stay();
+        }
+
         public async Task DeleteAsync(string noteId)
         {
             var parameters = new List<KeyValuePair<string, object>> {new KeyValuePair<string, object>("noteId", noteId)};

@@ -20,6 +20,17 @@ namespace Disboard.Misskey.Clients.Notes
             await SendWsAsync("/create", parameters).Stay();
         }
 
+        public async Task CreateWsAsync(string noteId, string reaction)
+        {
+            var parameters = new List<KeyValuePair<string, object>>
+            {
+                new KeyValuePair<string, object>("noteId", noteId),
+                new KeyValuePair<string, object>("reaction", reaction)
+            };
+
+            await SendWsAsync("/create", parameters).Stay();
+        }
+
         public async Task DeleteWsAsync(string noteId)
         {
             var parameters = new List<KeyValuePair<string, object>> {new KeyValuePair<string, object>("noteId", noteId)};
