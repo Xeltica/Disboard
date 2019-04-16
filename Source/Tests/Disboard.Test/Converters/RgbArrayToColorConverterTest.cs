@@ -12,9 +12,6 @@ namespace Disboard.Test.Converters
     {
         public class ExpectObject
         {
-            [JsonProperty("color")]
-            [JsonConverter(typeof(RgbArrayToColorConverter))]
-            public Color Color { get; set; }
         }
 
         [Fact]
