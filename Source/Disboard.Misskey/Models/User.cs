@@ -173,7 +173,7 @@ namespace Disboard.Misskey.Models
 
 		[JsonProperty("updatedAt")]
 		[JsonConverter(typeof(IsoDateTimeConverter))]
-		public DateTime UpdatedAt { get; set; }
+		public DateTime? UpdatedAt { get; set; }
 
 		[JsonProperty("username")]
 		public string Username { get; set; }

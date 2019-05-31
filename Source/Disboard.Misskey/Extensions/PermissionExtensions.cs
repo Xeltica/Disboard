@@ -11,46 +11,64 @@ namespace Disboard.Misskey.Extensions
             switch (permission)
             {
                 case Permission.AccountRead:
-                    return "account-read";
+                    return "read:account";
 
                 case Permission.AccountWrite:
-                    return "account-write";
+                    return "write:account";
+
+                case Permission.BlocksRead:
+                    return "read:blocks";
+
+                case Permission.BlocksWrite:
+                    return "write:blocks";
 
                 case Permission.DriveRead:
-                    return "drive-read";
+                    return "read:drive";
 
                 case Permission.DriveWrite:
-                    return "drive-write";
+                    return "write:drive";
 
                 case Permission.FavoritesRead:
-                    return "favorites-read";
+                    return "read:favorites";
 
                 case Permission.FavoriteWrite:
-                    return "favorite-write";
+                    return "write:favorites";
 
                 case Permission.FollowingWrite:
-                    return "following-write";
+                    return "write:following";
 
                 case Permission.FollowingRead:
-                    return "following-read";
+                    return "read:following";
 
                 case Permission.MessagingRead:
-                    return "messaging-read";
+                    return "read:messaging";
 
                 case Permission.MessagingWrite:
-                    return "messaging-write";
+                    return "write:messaging";
+
+                case Permission.MutesRead:
+                    return "read:mutes";
+
+                case Permission.MutesWrite:
+                    return "write:mutes";
 
                 case Permission.NoteWrite:
-                    return "note-write";
+                    return "write:notes";
+
+                case Permission.NotificationsRead:
+                    return "read:notifications";
 
                 case Permission.NotificationWrite:
-                    return "notification-write";
+                    return "write:notifications";
+
+                case Permission.ReactionsRead:
+                    return "read:reactions";
 
                 case Permission.ReactionWrite:
-                    return "reaction-write";
+                    return "write:reactions";
 
                 case Permission.VoteWrite:
-                    return "vote-write";
+                    return "write:vote";
 
                 case Permission.AccountRead2:
                     return "account/read";
