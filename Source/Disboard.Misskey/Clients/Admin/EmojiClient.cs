@@ -16,6 +16,7 @@ namespace Disboard.Misskey.Clients.Admin
 			parameters.AddIfValidValue("host", host);
 			return await PostAsync<List<Emoji>>("/list", parameters).Stay();
 		}
+
 		public async Task AddAsync(string name, string url, List<string> aliases)
 		{
 			var parameters = new List<KeyValuePair<string, object>>();
@@ -23,6 +24,14 @@ namespace Disboard.Misskey.Clients.Admin
 			parameters.AddIfValidValue("url", url);
 			parameters.AddIfValidValue("aliases", aliases);
 			await PostAsync("/add", parameters).Stay();
+		}
+
+
+		public async Task RemoveAsync(string id)
+		{
+			var parameters = new List<KeyValuePair<string, object>>();
+			parameters.AddIfValidValue("id", id);
+			await PostAsync("/remove", parameters).Stay();
 		}
 	}
 }
