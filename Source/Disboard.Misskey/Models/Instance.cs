@@ -58,6 +58,15 @@ namespace Disboard.Misskey.Models
         [JsonConverter(typeof(IsoDateTimeConverter))]
         public DateTime LastCommunicatedAt { get; set; }
 
+		[JsonProperty("disableGlobalTimeline")]
+		public bool DisableGlobalTimeline { get; set; }
+
+		[JsonProperty("enableEmojiReaction")]
+		public bool EnableEmojiReaction { get; set; }
+
+		[JsonProperty("driveCapacityPerLocalUserMb")]
+        public long DriveCapacityPerLocalUserMb { get; set; }
+
         [JsonProperty("isBlocked")]
         public bool IsBlocked { get; set; }
 
