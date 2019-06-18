@@ -33,7 +33,7 @@ namespace Disboard.Misskey.Clients
             return await PostAsync<List<Note>>("/conversation", parameters).Stay();
         }
 
-        public async Task<Note> CreateAsync(string text = null, string visibility = null, List<string> visibleUserIds = null, string cw = null, bool? viaMobile = null, Geo geo = null, List<string> fileIds = null, string replyId = null, string renoteId = null, Poll poll = null, bool? localOnly = null,
+        public async Task<Note> CreateAsync(string text = null, string visibility = null, List<string> visibleUserIds = null, string cw = null, bool? viaMobile = null, Geo geo = null, List<string> fileIds = null, string replyId = null, string renoteId = null, PollParameter poll = null, bool? localOnly = null,
                                             bool? noExtractMentions = null, bool? noExtractHashtags = null, bool? noExtractEmojis = null)
         {
             var parameters = new List<KeyValuePair<string, object>>();
