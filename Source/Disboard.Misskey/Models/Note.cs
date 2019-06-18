@@ -30,7 +30,7 @@ namespace Disboard.Misskey.Models
         public List<Emoji> Emojis { get; set; }
 
         [JsonProperty("files")]
-        public List<Media> Files { get; set; }
+        public List<File> Files { get; set; }
 
         [JsonProperty("fileIds")]
         public List<string> FileIds { get; set; }
