@@ -16,7 +16,7 @@ namespace Disboard.Misskey.Clients
 
         public async Task<InvitationCode> InviteAsync()
         {
-            return await PostAsync<InvitationCode>("invite").Stay();
+            return await PostAsync<InvitationCode>("/invite").Stay();
         }
     }
 }
