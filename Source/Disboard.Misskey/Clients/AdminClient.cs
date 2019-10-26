@@ -13,5 +13,10 @@ namespace Disboard.Misskey.Clients
         {
             Emoji = new Admin.EmojiClient(client);
         }
+
+        public async Task<InvitationCode> InviteAsync()
+        {
+            return await PostAsync<InvitationCode>("invite").Stay();
+        }
     }
 }
