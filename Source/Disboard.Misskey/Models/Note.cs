@@ -63,8 +63,10 @@ namespace Disboard.Misskey.Models
         public List<User> MentionedRemoteUsers { get; set; }
 
         [JsonProperty("myReaction")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public Reaction? MyReaction { get; set; }
+        public string MyReaction { get; set; }
+
+        [JsonProperty("reactions")]
+        public Dictionary<string, int> Reactions { get; set; }
 
         // always null
         [JsonProperty("next")]
